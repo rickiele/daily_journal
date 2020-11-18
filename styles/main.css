@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+/* Heading styles */
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Patua One", serif;
+  letter-spacing: 2px;
+}
+
+/* Form */
+.form{
+	display: flex;
+	flex-direction: column;
+}
+.form__journalDate{
+	display: flex;
+	flex-direction: column;
+}
+.form__conceptsCovered{
+	display: flex;
+	flex-direction: column;
+}
+.form__journalEntry {
+	display: flex;
+	flex-direction: column;
+}
+.form__mood {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+/* Footer */
+footer {
+	background-color: aqua;
+}
+.footer__githubAttribution {
+	text-decoration: none;
+}

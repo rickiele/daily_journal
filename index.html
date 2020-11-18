@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rickie's Daily Journal</title>
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+
+    <body>
+        <main id="container">
+            <h2 class="container__dailyJournal">Daily Journal</h1>
+            <form class="form" action="">
+                <!-- Journal date -->
+                <fieldset class="form__journalDate">
+                    <label for="journalDate">Date of Entry</label>
+                    <input type="date" name="journalDate" id="journalDate">
+                </fieldset>
+                <!-- Concepts covered -->
+                <fieldset class="form__conceptsCovered">
+                    <label for="conceptsCovered">Concepts Covered</label>
+                    <input type="text" name="conceptsCovered" id="conceptsCovered">
+                </fieldset>
+                <!-- Journal entry -->
+                <fieldset class="form__journalEntry">
+                    <label for="journalEntry">Journal Entry</label>
+                    <input type="textarea">
+                </fieldset>
+                <!-- Mood -->
+                <fieldset class="form__mood">
+                    <label for="mood">How are you feeling today?</label>
+                        <select id="mood" name="mood" form="moods">
+                            <option value="happy">Happy</option>
+                            <option value="sad">Sad</option>
+                            <option value="angry">Angry</option>
+                            <option value="optimistic">Optimistic</option>
+                            <option value="confused">Confused</option>
+                        </select>
+                </fieldset>
+                <input type="submit" value="Record Journal Entry">
+            </form>
+
+            <!-- <h3 class="container__journalEntriesHeading">Journal Entries</h3>
+            <ul class="container__journalEntriesList">
+                <li></li> <input type="submit" value="Delete"> <input type="submit" value="Edit">
+                <li></li> <input type="submit" value="Delete"> <input type="submit" value="Edit">
+                <li></li> <input type="submit" value="Delete"> <input type="submit" value="Edit">
+                <li></li> <input type="submit" value="Delete"> <input type="submit" value="Edit">
+                <li></li> <input type="submit" value="Delete"> <input type="submit" value="Edit">
+            </ul> -->
+
+            <footer>
+                <h5 class="footer__name">Rickie Le 
+                    <a class="footer__githubAttribution" href="https://github.com/rickiele">Github</a>
+                </h5>
+            </footer>
+        </main>
+
+        <script type="module" src="./scripts/main.js"></script>
+    </body>
+</html>
