@@ -2,32 +2,33 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <div class="head__blueStrip"></div>
         <title>Rickie's Daily Journal</title>
         <link rel="stylesheet" href="./styles/main.css">
     </head>
 
     <body>
         <main id="container">
-            <h2 class="container__dailyJournal">Daily Journal</h1>
+            <h1 class="container__dailyJournal">Rickie's Daily Journal</h1>
             <form class="form" action="">
                 <!-- Journal date -->
                 <fieldset class="form__journalDate">
-                    <label for="journalDate">Date of Entry</label>
+                    <label for="journalDate"><h2>Date of Entry</h2></label>
                     <input type="date" name="journalDate" id="journalDate">
                 </fieldset>
                 <!-- Concepts covered -->
                 <fieldset class="form__conceptsCovered">
-                    <label for="conceptsCovered">Concepts Covered</label>
+                    <label for="conceptsCovered"><h2>Concepts Covered</h2></label>
                     <input type="text" name="conceptsCovered" id="conceptsCovered">
                 </fieldset>
                 <!-- Journal entry -->
                 <fieldset class="form__journalEntry">
-                    <label for="journalEntry">Journal Entry</label>
+                    <label for="journalEntry"><h2>Journal Entry</h2></label>
                     <input type="textarea">
                 </fieldset>
                 <!-- Mood -->
                 <fieldset class="form__mood">
-                    <label for="mood">How are you feeling today?</label>
+                    <label for="mood"><h2>How are you feeling today?</h2></label>
                         <select id="mood" name="mood" form="moods">
                             <option value="happy">Happy</option>
                             <option value="sad">Sad</option>
@@ -36,7 +37,7 @@
                             <option value="confused">Confused</option>
                         </select>
                 </fieldset>
-                <input type="submit" value="Record Journal Entry">
+                <input class="form__button" type="submit" value="Record Journal Entry">
             </form>
 
             <!-- <h3 class="container__journalEntriesHeading">Journal Entries</h3>
@@ -49,10 +50,9 @@
             </ul> -->
 
             <footer>
-                <h5 class="footer__name">Rickie Le 
-                    <a class="footer__githubAttribution" href="https://github.com/rickiele">Github</a>
-                </h5>
+                <div class="footer__name"><h5>Rickie Le | <a href="https://github.com/rickiele">Github</a></div> </h5></div>
             </footer>
+
         </main>
 
         <script type="module" src="./scripts/main.js"></script>

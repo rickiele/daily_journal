@@ -1,53 +1,131 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
-
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+/* Lora */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 /*Typography
 --------------------------------------------------------------*/
-body,
+
+.head__blueStrip {
+	background-color: #8EBECB;
+	height: 20px;
+}
+body {
+	background-color: #F3FBFB;
+	margin: 0px;
+}
+
 button,
 input,
 select,
 textarea {
 	color: #404040;
-	font-family: "Comfortaa", Arial, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
+	font-weight: 400;
+}
+
+main {
+	margin: 20px;
 }
 
 /* Heading styles */
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Patua One", serif;
-  letter-spacing: 2px;
+.container__dailyJournal {
+	color: #30302C;
+	font-family: 'Lora', serif;
+	font-size: 3rem;
+	font-weight: 400;
+}
+
+/* Text styles */
+h2 {
+	color: #30302C;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
+
+#container {
+	background-color: #F3FBFB;
 }
 
 /* Form */
 .form{
 	display: flex;
 	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	width: 500px;
+	margin-bottom: 20px;
 }
 .form__journalDate{
+	background-color: #E3E7EB;
+	border-style: none;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 15px;
+	
 }
 .form__conceptsCovered{
+	background-color: #E3E7EB;
+	border-style: none;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 15px;
 }
 .form__journalEntry {
+	background-color: #E3E7EB;
+	border-style: none;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 15px;
 }
 .form__mood {
+	background-color: #E3E7EB;
+	border-style: none;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 15px;
 }
 
+/* Form button */
+.form__button {
+	background-color: #8EBECB;
+	border-style: none;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding: 20px;
+}
 
-
+.form__button:hover {
+	color: white;
+	background-color: #EE8C68;
+	border-style: none;
+}
 /* Footer */
 footer {
-	background-color: aqua;
+	background-color: #8EBECB;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding: 5px;
+}
+
+.footer__name {
+	padding-left: 20px;
 }
 .footer__githubAttribution {
+
+}
+
+a {
+	color: #30302C;
 	text-decoration: none;
+}
+
+a:hover {
+	color: white;
 }
