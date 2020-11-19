@@ -88,6 +88,37 @@ h2 {
 	flex-direction: column;
 	margin-bottom: 15px;
 }
+/* Journal */
+
+.journalEntry {
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #E3E7EB;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.journalEntry__journalHeading{ 
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding-left: 20px;
+}
+
+.entry__journalDate {
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.entry__journalConcept {
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #1487a4;
+}
+
+
 
 /* Form button */
 .form__button {
