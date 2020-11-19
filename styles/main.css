@@ -103,6 +103,35 @@ h2 {
 	padding-left: 20px;
 }
 
+.entry__buttonDiv {
+	margin-top: 20px;
+}
+.entry__editButton { 
+	background-color: #8EBECB;
+	border-style: none;
+	font-weight: 600;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-transform: uppercase;
+}
+
+.entry__editButton:hover  {
+	background-color: #EE8C68;
+}
+
+.entry__deleteButton:hover  {
+	background-color: #EE8C68;
+}
+
+
+.entry__deleteButton {
+	background-color: #8EBECB;
+	border-style: none;
+	font-weight: 600;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-transform: uppercase;
+}
 .entry__journalDate {
 	font-weight: 600;
 	letter-spacing: 1px;
@@ -135,6 +164,8 @@ h2 {
 	background-color: #EE8C68;
 	border-style: none;
 }
+
+
 /* Footer */
 footer {
 	background-color: #8EBECB;
