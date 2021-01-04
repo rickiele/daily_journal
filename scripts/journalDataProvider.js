@@ -6,39 +6,42 @@
  *      the entries for different purposes.
  */
 
-// This is the original data.
-const journal = [
-    {
-        id: 1,
-        date: "11/16/2020",
-        concept: "Group Project",
-        entry: "We had a full day to collaborate with our teammates for our Hello World group project.",
-        mood: "Happy"
-    },
-    {
-        id: 2,
-        date: "11/17/2020",
-        concept: "JavaScript | Beginnings",
-        entry: "Did a demo of our project to the class. Now, we are diving into JavaScript.",
-        mood: "Happy"
-    },
-    {
-        id: 3,
-        date: "11/18/2020",
-        concept: "JavaScript | Modules and Daily Journal ",
-        entry: "It's a full lab day to go over the concepts on your own and to do the Daily Journal exercise.",
-        mood: "Confused"
-    }
-]
+const eventHub = document.querySelector(".container")
 
-/*
-    You export a function that provides a version of the
-    raw data in the format that you want
-*/
+let journal = []
+
 export const useJournalEntries = () => {
-    const sortedByDate = journal.sort(
+    journal.sort(
         (currentEntry, nextEntry) =>
             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
     ) 
-    return sortedByDate
+    return journal.slice()
 }
+
+export const getEntries = () => {
+    return fetch("http://localhost:8088/entries") // Fetch from the API
+        .then(response => response.json())  // Parse as JSON
+        .then(parsedEntries => {
+            journal = parsedEntries
+        })
+}
+
+const dispatchStateChangeEvent = () => {
+    const journalStateChangedEvent = new CustomEvent("journalStateChanged")
+
+    eventHub.dispatchEvent(journalStateChangedEvent)
+}
+
+export const saveJournalEntries = newEntry => {
+    let stringifiedObj = JSON.stringify(newEntry)
+    debugger
+    return fetch('http://localhost:8088/entries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: stringifiedObj
+    })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent)
+  }
