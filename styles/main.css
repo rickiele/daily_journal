@@ -7,7 +7,7 @@
 
 .head__blueStrip {
 	background-color: #8EBECB;
-	height: 20px;
+	height: 60px;
 }
 body {
 	background-color: #F3FBFB;
@@ -35,7 +35,8 @@ main {
 	color: #30302C;
 	font-family: 'Lora', serif;
 	font-size: 3rem;
-	font-weight: 400;
+	font-weight: 600;
+	text-align: center;
 }
 
 /* Text styles */
@@ -65,8 +66,8 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 15px;
-	
 }
+
 .form__conceptsCovered{
 	background-color: #E3E7EB;
 	border-style: none;
@@ -74,6 +75,7 @@ h2 {
 	flex-direction: column;
 	margin-bottom: 15px;
 }
+
 .form__journalEntry {
 	background-color: #E3E7EB;
 	border-style: none;
@@ -147,10 +149,17 @@ h2 {
 	color: #1487a4;
 }
 
+.entry__journalMood {
+	color: #EE8C68;
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
 
 
 /* Form button */
-.form__button {
+button#journalEntryRecordBtn  {
 	background-color: #8EBECB;
 	border-style: none;
 	font-weight: 700;
@@ -159,7 +168,7 @@ h2 {
 	padding: 20px;
 }
 
-.form__button:hover {
+button#journalEntryRecordBtn:hover {
 	color: white;
 	background-color: #EE8C68;
 	border-style: none;
@@ -173,14 +182,11 @@ footer {
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	padding: 5px;
+	padding: 10px;
 }
 
 .footer__name {
 	padding-left: 20px;
-}
-.footer__githubAttribution {
-
 }
 
 a {

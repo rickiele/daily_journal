@@ -6,42 +6,57 @@
  *      the entries for different purposes.
  */
 
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector(".journal")
 
+// Variable used to store a copy of the array of journal entries
 let journal = []
 
+/*
+    You export a function that provides a version of the
+    raw data in the format that you want
+*/
 export const useJournalEntries = () => {
     journal.sort(
         (currentEntry, nextEntry) =>
             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-    ) 
+    )
     return journal.slice()
 }
 
+
+// still not sure what this does exactly...
+const dispatchStateChangeEvent = () => {
+    eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
+}
+
+// GET AN ARRAY OF ALL YOUR ENTRIES - FETCH
 export const getEntries = () => {
-    return fetch("http://localhost:8088/entries") // Fetch from the API
-        .then(response => response.json())  // Parse as JSON
-        .then(parsedEntries => {
-            journal = parsedEntries
+    return fetch("http://localhost:8088/entries")
+        .then(response => response.json())
+        .then(entries => {
+            journal = entries
         })
 }
 
-const dispatchStateChangeEvent = () => {
-    const journalStateChangedEvent = new CustomEvent("journalStateChanged")
-
-    eventHub.dispatchEvent(journalStateChangedEvent)
-}
-
-export const saveJournalEntries = newEntry => {
-    let stringifiedObj = JSON.stringify(newEntry)
-    debugger
-    return fetch('http://localhost:8088/entries', {
+// SAVE A JOURNAL ENTRY - FETCH
+export const saveJournalEntry = (newJournalEntry) => {
+    fetch("http://localhost:8088/entries", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: stringifiedObj
+        body: JSON.stringify(newJournalEntry)
+    })
+        .then(getEntries)
+        .then(dispatchStateChangeEvent)
+}
+
+// DELETE A JOURNAL ENTRY - FETCH
+export const deleteEntry = entryId => {
+    return fetch(`http://localhost:8088/entries/${entryId}`, {
+        method: "DELETE"
     })
     .then(getEntries)
     .then(dispatchStateChangeEvent)
-  }
+}
+
