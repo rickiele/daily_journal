@@ -2,45 +2,83 @@
   "entries": [
     {
       "id": 1,
-      "date": "11/16/2020",
+      "date": "2020-11-16",
       "concept": "Group Project",
       "entry": "We had a full day to collaborate with our teammates for our Hello World group project.",
-      "mood": "Happy"
+      "moodId": 4
     },
     {
       "id": 2,
-      "date": "11/17/2020",
+      "date": "2020-11-17",
       "concept": "JavaScript | Beginnings",
       "entry": "Did a demo of our project to the class. Now, we are diving into JavaScript.",
-      "mood": "Happy"
+      "moodId": 4
     },
     {
       "id": 3,
-      "date": "11/18/2020",
+      "date": "2020-11-18",
       "concept": "JavaScript | Modules and Daily Journal ",
       "entry": "It's a full lab day to go over the concepts on your own and to do the Daily Journal exercise.",
-      "mood": "Confused"
+      "moodId": 7
     },
     {
-      "date": "2021-01-15",
+      "date": "2021-01-08",
       "concept": "Daily Journal",
-      "entry": "Hello",
-      "mood": "overjoyed",
+      "entry": "fdfdfdf",
+      "mood": "",
       "id": 4
     },
     {
-      "date": "2021-01-06",
-      "concept": "Daily Journal",
-      "entry": "dssd",
-      "mood": "😁 Overjoyed",
+      "date": "2021-01-12",
+      "concept": "ffd",
+      "entry": "dfdffd",
+      "moodId": null,
       "id": 5
     },
     {
-      "date": "2021-01-06",
+      "date": "2021-01-31",
       "concept": "Bubberino",
-      "entry": "Hello bubberino",
-      "mood": "🤩 Optimistic",
+      "entry": "dsfdsfsdf",
+      "moodId": "8",
       "id": 6
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "😁 Overjoyed"
+    },
+    {
+      "id": 2,
+      "label": "🤩 Optimistic"
+    },
+    {
+      "id": 3,
+      "label": "🧐 Determined"
+    },
+    {
+      "id": 4,
+      "label": "😁 Happy"
+    },
+    {
+      "id": 5,
+      "label": "😶 Okay"
+    },
+    {
+      "id": 6,
+      "label": "😢 Big Sad"
+    },
+    {
+      "id": 7,
+      "label": "😩 Very Confused"
+    },
+    {
+      "id": 8,
+      "label": "😡 Frustrated"
+    },
+    {
+      "id": 9,
+      "label": "🤔 Forgetful"
     }
   ]
 }

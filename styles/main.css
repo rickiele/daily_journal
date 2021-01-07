@@ -9,8 +9,9 @@
 	background-color: #8EBECB;
 	height: 60px;
 }
+
 body {
-	background-color: #F3FBFB;
+	background-color: #cbe3e9;
 	margin: 0px;
 }
 
@@ -32,7 +33,7 @@ main {
 /* Heading styles */
 
 .container__dailyJournal {
-	color: #30302C;
+	color: #404040;
 	font-family: 'Lora', serif;
 	font-size: 3rem;
 	font-weight: 600;
@@ -41,7 +42,7 @@ main {
 
 /* Text styles */
 h2 {
-	color: #30302C;
+	color: #404040;
 	font-size: 16px;
 	font-weight: 700;
 	letter-spacing: .5px;
@@ -49,7 +50,6 @@ h2 {
 }
 
 #container {
-	background-color: #F3FBFB;
 }
 
 /* Form */
@@ -58,7 +58,9 @@ h2 {
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	width: 500px;
-	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
 }
 .form__journalDate{
 	background-color: #E3E7EB;

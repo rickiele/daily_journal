@@ -2,6 +2,7 @@
 
  */
 import { saveJournalEntry } from '../journalDataProvider.js'
+import { useMoods, getMoods } from '../moodProvider.js'
 
 const contentTarget = document.querySelector(".form")
 const eventHub = document.querySelector(".journal")
@@ -26,24 +27,29 @@ const render = () => {
         <fieldset class="form__mood">
           <label for="mood"><h2>How are you feeling today?</h2></label>
               <select id="mood" name="mood" form="moods">
-                  <option value="0">Select a mood</option>
-                  <option value="😁 Overjoyed">😁 Overjoyed</option>
-                  <option value="🤩 Optimistic">🤩 Optimistic</option>
-                  <option value="🧐 Determined">🧐 Determined</option>
-                  <option value="😁 Happy">😁 Happy</option>
-                  <option value="😶 Okay">😶 Okay</option>
-                  <option value="😢 Big Sad">😢 Big Sad</option>
-                  <option value="😩 Very Confused">😩 Very Confused</option>
-                  <option value="😡 Frustrated">😡 Frustrated</option>
-                  <option value="🤔 Forgetful">🤔 Forgetful</option>
+                  ${ 
+                    allMoods.map(
+                      (mood) => {
+                        return `<option value="${ mood.id }">${ mood.label }</option>`
+                      }
+                      ).join("")
+                  })
               </select>
-        </fieldset>
-          <button id="journalEntryRecordBtn">Record Journal Entry</button>
-    `
+              </fieldset>
+              <button id="journalEntryRecordBtn">Record Journal Entry</button>
+              `
 }
+            
+ 
+
+let allMoods = []
 
 export const JournalFormComponent = () => {
-  render()
+    getMoods()
+      .then( () => {
+      allMoods = useMoods()
+      render()
+   })  
 }
 
 // What ever is entered is putting it in the API
@@ -52,13 +58,13 @@ eventHub.addEventListener("click", (clickEvent) => {
       const date = document.querySelector("#journalDate").value
       const concept = document.querySelector("#conceptsCovered").value
       const entry = document.querySelector("#journalEntry").value
-      const mood = document.querySelector("#mood").value    
+      const mood = document.querySelector("#mood").value
   
       const newJournalEntry = {
           date: date,
           concept: concept,
           entry: entry,
-          mood: mood
+          moodId: mood
       }
       saveJournalEntry(newJournalEntry)    
   }

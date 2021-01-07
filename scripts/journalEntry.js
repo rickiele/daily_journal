@@ -13,7 +13,7 @@ export const JournalEntryComponent = (entry) => {
             <div class="entry__buttonDiv">
                 <button class="entry__editButton">Edit</button>
                 <button class="entry__deleteButton">Delete</button>
-             </div>
+            </div>
         </section>
     `
 }

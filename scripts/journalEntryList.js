@@ -6,6 +6,7 @@
  */
 import { useJournalEntries, getEntries } from "./journalDataProvider.js"
 import { JournalEntryComponent } from "./journalEntry.js"
+import { useMoods, getMoods } from './moodProvider.js'
 
 // DOM reference to where all entries will be rendered
 const entryLog = document.querySelector("#entryLog")
@@ -40,17 +41,30 @@ eventHub.addEventListener("journalEntryRecorded", customEvent => {
 
 
 let journalEntryCards = []
-
+let allMoods = []
 
 export const EntryListComponent = () => {
+    // getEntries()
+    // .then(getMoods)
+    // .then( () => {
+    //     allMoods = useMoods()
+    //     let entries = useJournalEntries()
+
+    //     for (const entry of entries) {
+    //         const matchedMoods = allMoods.find( (mood) => mood.id === entry.moodId)
+    //         entry.mood = matchedMoods.label
+    //          journalEntryCards.push(JournalEntryComponent(entry))
+            
+    //         }
+    //         entryLog.innerHTML += journalEntryCards.join("")
+    // })
+
+
+
     // Use the journal entry data from the data provider component
         getEntries().then( () => {
             let entries = useJournalEntries()
             for (const entry of entries) {
-                /*
-                    Invoke the component that returns an
-                    HTML representation of a single entry
-                */
                 journalEntryCards.push(JournalEntryComponent(entry))
             }
             entryLog.innerHTML += journalEntryCards.join("")
